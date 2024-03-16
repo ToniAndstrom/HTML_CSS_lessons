@@ -26,6 +26,7 @@ nav a {
     color:black;
     padding: 20px;
 }
+
 .mobile {
     display: none;
     background: black;
@@ -33,11 +34,88 @@ nav a {
     border: none;
 }
 body {
-    height: 100vh;
+    height: 110vh;
 }
-Image {
-    size: 40%;
-    height: 100vh;
+    .gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+    margin: 5px;
+    gap: 10px;
+    padding: 10px;
+    height: 100%;
+}
+
+.item1 {
+    background-image: url("NewYork.jpg");
+    background-size: cover;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 4 ;
+    background-position: center center;
+    ;
+    
+}
+.item2 {
+    background-image:  url("shibuya.jpg");
+    background-size: cover;
+    grid-column:3 / span 2 ;
+    grid-row: 1 / span 2 ;
+    background-position: center center;
+   
+}
+.item3 {
+    background-image:  url("owl_graffiti.jpg");
+    background-size:cover;
+    grid-column:3 / span 2 ;
+    grid-row: 3 / span 2 ;
+    background-position: center center;
+}
+.item4 {
+    background-image: url("beach.jpg");
+    background-size: cover;
+    grid-column:5 / span 2 ;
+    grid-row: 1 / span 5;
+    background-position: center center;
+}
+.item5 {
+    background-image:  url("pineapples.jpg");
+    background-size: cover;
+    grid-column: 1 / span 1;
+    grid-row:5 / span 1 ;
+    background-position: center center;
+}
+.item6 {
+    background-image:  url("rasberries.jpg");
+    background-size: cover;
+    grid-column: 1 / span 1 ;
+    grid-row: 6 / span 1;
+    background-position: center center;
+}
+.item7 {
+    background-image:  url("apples.jpg");
+    background-size: cover;
+    grid-column: 1 / span 1;
+    grid-row: 7 / span 1 ;
+    background-position: center center;
+}
+.item8 {
+    background-image:  url("forest.jpg");
+    background-size: cover;
+    grid-column: 2 / span 3;
+    grid-row: 5 / span 3 ;
+    background-position: center center;
+}
+.item9 {
+    background-image:  url("dancer.jpg");
+    background-size: cover;
+    grid-column: 5 / span 2 ;
+    grid-row: 6 / span 2;
+    background-position: center center;
+}
+Img {
+    max-height: 20rem;
+    max-width: 20rem;
+    
 }
 
 .hero-image {
@@ -63,17 +141,26 @@ Image {
     font-size: 50px;
 }
 
-
+#projectsH2, #aboutMeH2, #skillsH2, #contact {
+    scroll-margin-top: 6rem;
+}
 #projects {
     display: flex;
 }
 h2 {
     padding:20px;
 }
+h3{
+    padding:20px;
+}
+#projects p{
+   margin-bottom: 10px;
+}
 .card{
-    max-width: 25vw;
+    min-width: 25vw;
     padding: 20px;
     text-align: center;
+    align-items: center;
     border: solid lightgray;
     margin: 50px;
    
@@ -83,26 +170,21 @@ a{
     color: rgb(255, 119, 0);
 }
 #aboutMe img {
-    width: 20%;
-    height: 20%;
-    padding-right: 20px;
-    padding-left: 20px;
+    display: flex;
+    padding:20px;
+}
+#aboutMe p{
+    padding:20px;
 }
 #aboutMe {
     background: orange;
     display: flex;
-    padding: 2rem;
+    padding: 1rem;
 }
 #aboutMeH2 {
     background: orange;
 }
-#aboutme img {
-flex:1;
 
-}
-#aboutme p {
-    flex: 3;
-}
 #skills {
     display: flex;
     margin:20px;
@@ -230,14 +312,17 @@ footer{
         display: block;
         margin: 2rem 1rem;
     }
-    .card{
-        align-items: center;
-    }
+   
    #projects {
     flex-direction: column;
+    align-items: center;
    }
+   
    #skills{
     flex-direction: column;
     align-items: center;
+   }
+   #aboutMe{
+    flex-direction: column;
    }
 }
