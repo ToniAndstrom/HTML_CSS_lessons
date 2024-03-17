@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    overscroll-behavior: none;
 }
 html {
     scroll-behavior: smooth;
@@ -141,7 +142,7 @@ Img {
     font-size: 50px;
 }
 
-#projectsH2, #aboutMeH2, #skillsH2, #contact {
+#projectsH2, #aboutMeH2, #skillsH2, #contact, #gallery {
     scroll-margin-top: 6rem;
 }
 #projects {
@@ -289,20 +290,17 @@ footer{
     display: none;
 }
 .bg {
-    background: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(30px);
+    background: whitesmoke;
 }
+   
+
 @media (max-width: 600px){
     nav ul {
         display: none;
     }
-    .mobile{
-    display: block;
-    }
     ul.responsive {
         display: block;
-        background-color: rgba(0, 0, 0, .1);
-        backdrop-filter: blur(30px);
+        background-color: whitesmoke;
         color: #333;
         position: absolute;
         left: 0;
@@ -312,6 +310,10 @@ footer{
         display: block;
         margin: 2rem 1rem;
     }
+    .mobile{
+    display: block;
+    }
+   
    
    #projects {
     flex-direction: column;
